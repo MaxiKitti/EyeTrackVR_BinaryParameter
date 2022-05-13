@@ -1,12 +1,12 @@
                 try:
                     xpercentage = (((xt - vc.xmin) * 100) / (vc.xmax - vc.xmin)) / 100 #TESTING NEEDED AM UNSURE IF VALUES NEED TO BE FLIPPED
                     ypercentage = (((yt - vc.ymin) * 100) / (vc.ymax - vc.ymin)) / 100
-                    if LBlink >= 0.125: 
-                        print('[WARN] X Value Exceedes Calibrated Value.')
-                        xpercentage = 1
-                    if ypercentage >= 1: 
-                        print('[WARN] Y Value Exceedes Calibrated Value.')
-                        ypercentage = 1
+                    if LBlink >= 0.125:
+                      LBlink1 = false
+                      LBlink2 = false
+                      LBlink4 = false
+                      elif LBlink =< 0.125 > 0.25
+                    if RBlink >= 0.125: 
                 
                     client.send_message("/Avatar/LBlink1", LBlink1)
                     client.send_message("/Avatar/LBlink2", LBlink2)
