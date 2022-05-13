@@ -33,7 +33,39 @@
                       LBlink1 = true
                       LBlink2 = true
                       LBlink4 = true
-                    if RBlink <= 0.125: 
+                      
+                    if RBlink <= 0.125:
+                      RBlink1 = false
+                      RBlink2 = false
+                      RBlink4 = false
+                    elif RBlink > 0.125 and RBlink <= 0.25:
+                      RBlink1 = true
+                      RBlink2 = false
+                      RBlink4 = false
+                    elif RBlink > 0.25 and RBlink <= 0.375:
+                      RBlink1 = false
+                      RBlink2 = true
+                      RBlink4 = false
+                    elif RBlink > 0.375 and RBlink <= 0.5:
+                      RBlink1 = true
+                      RBlink2 = true
+                      RBlink4 = false
+                    elif RBlink > 0.5 and RBlink <= 0.625:
+                      RBlink1 = false
+                      RBlink2 = false
+                      RBlink4 = true
+                    elif RBlink > 0.625 and RBlink <= 0.75:
+                      RBlink1 = true
+                      RBlink2 = false
+                      RBlink4 = true
+                    elif RBlink > 0.75 and RBlink <= 0.875:
+                      RBlink1 = false
+                      RBlink2 = true
+                      RBlink4 = true
+                    elif RBlink > 0.875 and RBlink <= 1:
+                      RBlink1 = true
+                      RBlink2 = true
+                      RBlink4 = true
                 
                     client.send_message("/Avatar/LBlink1", LBlink1)
                     client.send_message("/Avatar/LBlink2", LBlink2)
@@ -42,53 +74,6 @@
                     client.send_message("/Avatar/RBlink2", RBlink2)
                     client.send_message("/Avatar/RBlink4", RBlink4)
                     print('L: ', LBlink, ' R: ', RBlink)
-
-                
-                if xt > vc.xmax:
-                    if vc.xmax != 0:
-                        vc.xmax = xt
-                
-                if xt < vc.xmin:
-                    if vc.xmin != 0:
-                        vc.xmin = xt
-
-                if yt > vc.ymax:
-                    if vc.ymax != 0:
-                        vc.ymax = yt
-                
-                if yt < vc.ymin:
-                    if vc.ymin != 0:
-                        vc.ymin = yt
-
-                xt = x + int(w/2) 
-                yt = y + int(h/2)
-
-                
-                cv2.line(threshold, (x + int(w/2), 0), (x + int(w/2), rows), (255, 0, 0), 1) #visualizes eyetracking on threshold
-                cv2.line(threshold, (0, y + int(h/2)), (cols, y + int(h/2)), (255, 0, 0), 1)
-                cv2.drawContours(threshold, [cnt], -1, (255, 0, 0), 3)
-                cv2.rectangle(threshold, (x, y), (x + w, y + h), (255, 0, 0), 2)
-
-                cv2.line(gray_roi, (x + int(w/2), 0), (x + int(w/2), rows), (255, 0, 0), 1) #visualizes eyetracking on greyscale 
-                cv2.line(gray_roi, (0, y + int(h/2)), (cols, y + int(h/2)), (255, 0, 0), 1)
-                cv2.drawContours(gray_roi, [cnt], -1, (255, 0, 0), 3)
-                cv2.rectangle(gray_roi, (x, y), (x + w, y + h), (255, 0, 0), 2)
-                break
-
-        except:
-            print('[ERROR] Main Loop Failure.')
-
-        cv2.imshow("Threshold", threshold)
-        cv2.imshow("GreyScale", gray_roi)
-        cv2.imshow("Roi", roi)
-
-        cv2.imshow('color', imgrgb)
-        cv2.imshow('frame', img)
-        cv2.waitKey(1)
-        
-if __name__ == '__main__':
-    #'http://192.168.0.202:81/stream'
-        
     try:
         OSCip="127.0.0.1" 
         OSCport=9000 #VR Chat OSC port
