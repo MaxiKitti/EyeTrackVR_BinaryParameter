@@ -1,6 +1,9 @@
                 try:
                     xpercentage = (((xt - vc.xmin) * 100) / (vc.xmax - vc.xmin)) / 100 #TESTING NEEDED AM UNSURE IF VALUES NEED TO BE FLIPPED
                     ypercentage = (((yt - vc.ymin) * 100) / (vc.ymax - vc.ymin)) / 100
+                    
+                    #all binary parameter booleans mapped for the left blink
+                    
                     if LBlink <= 0.125:
                       LBlink1 = false
                       LBlink2 = false
@@ -33,6 +36,8 @@
                       LBlink1 = true
                       LBlink2 = true
                       LBlink4 = true
+                      
+                      #all binary parameter booleans mapped for the right blink
                       
                     if RBlink <= 0.125:
                       RBlink1 = false
@@ -74,32 +79,3 @@
                     client.send_message("/Avatar/RBlink2", RBlink2)
                     client.send_message("/Avatar/RBlink4", RBlink4)
                     print('L: ', LBlink, ' R: ', RBlink)
-    try:
-        OSCip="127.0.0.1" 
-        OSCport=9000 #VR Chat OSC port
-        client = udp_client.SimpleUDPClient(OSCip, OSCport)
-    except:
-        print('[ERROR] Connection to VR Chat via OSC Failed')
-            
-    try:
-        camadd= open("cam.txt","r+")
-        src = camadd.read().strip()
-        camadd.close  
-    except:
-        addressipn = input('Enter IP Stream Address of Camera :>: ')
-        writet(addressipn)
-        src = addressipn.strip().lower()
-    
-
-    threaded_camera = ThreadedCamera(src)
-
-    h = 1 #defines hight value so blink check doesnt error out
-    ronce = 0
-    while True:
-        try:   
-            if ronce == 0:  
-                vc()
-                ronce = 1
-            threaded_camera.show_frame()
-        except AttributeError:
-            pass
