@@ -1,0 +1,21 @@
+                try:
+                    xpercentage = (((xt - vc.xmin) * 100) / (vc.xmax - vc.xmin)) / 100 #TESTING NEEDED AM UNSURE IF VALUES NEED TO BE FLIPPED
+                    ypercentage = (((yt - vc.ymin) * 100) / (vc.ymax - vc.ymin)) / 100
+                    
+                    #all binary parameter booleans mapped for the left blink
+                    
+                    if LBlink <= 0.5:
+                      LBlink1 = false
+                    elif LBlink > 0.5 and LBlink <= 1:
+                      LBlink1 = true
+                      
+                      #all binary parameter booleans mapped for the right blink
+                      
+                    if RBlink <= 0.5:
+                      RBlink1 = false
+                    elif RBlink > 0.5 and RBlink <= 1:
+                      RBlink1 = true
+                
+                    client.send_message("/Avatar/LBlink1", LBlink1)
+                    client.send_message("/Avatar/RBlink1", RBlink1)
+                    print('L: ', LBlink, ' R: ', RBlink)
