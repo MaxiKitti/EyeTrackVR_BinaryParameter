@@ -21,6 +21,18 @@
                       LBlink1 = false
                       LBlink2 = false
                       LBlink4 = true
+                    elif LBlink > 0.625 and LBlink <= 0.75:
+                      LBlink1 = true
+                      LBlink2 = false
+                      LBlink4 = true
+                    elif LBlink > 0.75 and LBlink <= 0.875:
+                      LBlink1 = false
+                      LBlink2 = true
+                      LBlink4 = true
+                    elif LBlink > 0.875 and LBlink <= 1:
+                      LBlink1 = true
+                      LBlink2 = true
+                      LBlink4 = true
                     if RBlink <= 0.125: 
                 
                     client.send_message("/Avatar/LBlink1", LBlink1)
