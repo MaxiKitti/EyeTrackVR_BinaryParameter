@@ -19,3 +19,4 @@
                     client.send_message("/Avatar/LBlink1", LBlink1)
                     client.send_message("/Avatar/RBlink1", RBlink1)
                     print('L: ', LBlink, ' R: ', RBlink)
+                    
