@@ -1,12 +1,19 @@
                 try:
                     xpercentage = (((xt - vc.xmin) * 100) / (vc.xmax - vc.xmin)) / 100 #TESTING NEEDED AM UNSURE IF VALUES NEED TO BE FLIPPED
                     ypercentage = (((yt - vc.ymin) * 100) / (vc.ymax - vc.ymin)) / 100
-                    if LBlink >= 0.125:
+                    if LBlink <= 0.125:
                       LBlink1 = false
                       LBlink2 = false
                       LBlink4 = false
-                      elif LBlink =< 0.125 > 0.25
-                    if RBlink >= 0.125: 
+                    elif LBlink > 0.125 and LBlink <= 0.25:
+                      LBlink1 = true
+                      LBlink2 = false
+                      LBlink4 = false
+                    elif LBlink > 0.25 and LBlink <= 0.375:
+                      LBlink1 = false
+                      LBlink2 = true
+                      LBlink4 = false
+                    if RBlink <= 0.125: 
                 
                     client.send_message("/Avatar/LBlink1", LBlink1)
                     client.send_message("/Avatar/LBlink2", LBlink2)
