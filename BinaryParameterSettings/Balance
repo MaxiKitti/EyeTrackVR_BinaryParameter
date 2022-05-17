@@ -66,10 +66,10 @@ elif RBlink > 7 / 8 and RBlink <= 1:
     RBlink2 = true
     RBlink4 = true
                 
-                    client.send_message("/Avatar/LBlink1", LBlink1)
-                    client.send_message("/Avatar/LBlink2", LBlink2)
-                    client.send_message("/Avatar/LBlink4", LBlink4)
-                    client.send_message("/Avatar/RBlink1", RBlink1)
-                    client.send_message("/Avatar/RBlink2", RBlink2)
-                    client.send_message("/Avatar/RBlink4", RBlink4)
-                    print('L: ', LBlink, ' R: ', RBlink)
+client.send_message("/Avatar/LBlink1", LBlink1)
+client.send_message("/Avatar/LBlink2", LBlink2)
+client.send_message("/Avatar/LBlink4", LBlink4)
+client.send_message("/Avatar/RBlink1", RBlink1)
+client.send_message("/Avatar/RBlink2", RBlink2)
+client.send_message("/Avatar/RBlink4", RBlink4)
+print('L: ', LBlink, ' R: ', RBlink)
