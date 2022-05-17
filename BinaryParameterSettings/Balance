@@ -1,35 +1,35 @@
 
                     #all binary parameter booleans mapped for the left blink
                     
-                    if LBlink <= 0.125:
+                    if LBlink <= 1/8:
                       LBlink1 = false
                       LBlink2 = false
                       LBlink4 = false
-                    elif LBlink > 0.125 and LBlink <= 0.25:
+                    elif LBlink > 1/8 and LBlink <= 2/8:
                       LBlink1 = true
                       LBlink2 = false
                       LBlink4 = false
-                    elif LBlink > 0.25 and LBlink <= 0.375:
+                    elif LBlink > 2/8 and LBlink <= 3/8:
                       LBlink1 = false
                       LBlink2 = true
                       LBlink4 = false
-                    elif LBlink > 0.375 and LBlink <= 0.5:
+                    elif LBlink > 3/8 and LBlink <= 4/8:
                       LBlink1 = true
                       LBlink2 = true
                       LBlink4 = false
-                    elif LBlink > 0.5 and LBlink <= 0.625:
+                    elif LBlink > 4/8 and LBlink <= 5/8:
                       LBlink1 = false
                       LBlink2 = false
                       LBlink4 = true
-                    elif LBlink > 0.625 and LBlink <= 0.75:
+                    elif LBlink > 5/8 and LBlink <= 6/8:
                       LBlink1 = true
                       LBlink2 = false
                       LBlink4 = true
-                    elif LBlink > 0.75 and LBlink <= 0.875:
+                    elif LBlink > 6/8 and LBlink <= 7/8:
                       LBlink1 = false
                       LBlink2 = true
                       LBlink4 = true
-                    elif LBlink > 0.875 and LBlink <= 1:
+                    elif LBlink > 7/8 and LBlink <= 1:
                       LBlink1 = true
                       LBlink2 = true
                       LBlink4 = true
