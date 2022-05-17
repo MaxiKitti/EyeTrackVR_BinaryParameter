@@ -1,36 +1,33 @@
+#all binary parameter booleans mapped for the left eye openness 
+if LBlink <= 1 / 4:
+    LBlink1 = false
+    LBlink2 = false
+elif LBlink > 1 / 4 and LBlink <= 2 / 4:
+    LBlink1 = true
+    LBlink2 = false
+elif LBlink > 2 / 4 and LBlink <= 3 / 4:
+    LBlink1 = false
+    LBlink2 = true
+elif LBlink > 3 / 4 and LBlink <= 1:
+    LBlink1 = true
+    LBlink2 = true
+                      
+#all binary parameter booleans mapped for the right eye openness                      
+if RBlink <= 1 / 4:
+    RBlink1 = false
+    RBlink2 = false
+elif RBlink > 1 / 4 and RBlink <= 2 / 4:
+    RBlink1 = true
+    RBlink2 = false
+elif RBlink > 2 / 4 and RBlink <= 3 / 4:
+    RBlink1 = false
+    RBlink2 = true
+elif RBlink > 3 / 4 and RBlink <= 1:
+    RBlink1 = true
+    RBlink2 = true
 
-                    #all binary parameter booleans mapped for the left blink
-                    
-                    if LBlink <= 1/4:
-                      LBlink1 = false
-                      LBlink2 = false
-                    elif LBlink > 1/4 and LBlink <= 2/4:
-                      LBlink1 = true
-                      LBlink2 = false
-                    elif LBlink > 2/4 and LBlink <= 3/4:
-                      LBlink1 = false
-                      LBlink2 = true
-                    elif LBlink > 3/4 and LBlink <= 1:
-                      LBlink1 = true
-                      LBlink2 = true
-                      
-                      #all binary parameter booleans mapped for the right blink
-                      
-                    if RBlink <= 0.25:
-                      RBlink1 = false
-                      RBlink2 = false
-                    elif RBlink > 0.25 and RBlink <= 0.5:
-                      RBlink1 = true
-                      RBlink2 = false
-                    elif RBlink > 0.5 and RBlink <= 0.75:
-                      RBlink1 = false
-                      RBlink2 = true
-                    elif RBlink > 0.75 and RBlink <= 1:
-                      RBlink1 = true
-                      RBlink2 = true
-                
-                    client.send_message("/Avatar/LBlink1", LBlink1)
-                    client.send_message("/Avatar/LBlink2", LBlink2)
-                    client.send_message("/Avatar/RBlink1", RBlink1)
-                    client.send_message("/Avatar/RBlink2", RBlink2)
-                    print('L: ', LBlink, ' R: ', RBlink)
+client.send_message("/Avatar/LBlink1", LBlink1)
+client.send_message("/Avatar/LBlink2", LBlink2)
+client.send_message("/Avatar/RBlink1", RBlink1)
+client.send_message("/Avatar/RBlink2", RBlink2)
+print('L: ', LBlink, ' R: ', RBlink)
