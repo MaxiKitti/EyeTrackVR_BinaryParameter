@@ -1,0 +1,16 @@
+#all binary parameter booleans mapped for the left eye openness
+                    
+if LEyeSq <= 1 / 2:
+    LEyeSq1 = false
+elif LEyeSq > 1 / 2 and LEyeSq <= 1:
+    LEyeSq1 = true
+#all binary parameter booleans mapped for the right eye openness
+
+if REyeSq <= 1 / 2:
+    REyeSq1 = false
+elif REyeSq > 1 / 2 and REyeSq <= 1:
+    REyeSq1 = true
+                
+client.send_message("/Avatar/LEyeSq1", LEyeSq1)
+client.send_message("/Avatar/REyeSq1", REyeSq1)
+print('L: ', LEyeSq, ' R: ', REyeSq)
