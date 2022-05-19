@@ -1,0 +1,75 @@
+#all binary parameter booleans mapped for the left eye openness
+if REyeDila <= 1 / 8:
+    REyeDila1 = false
+    REyeDila2 = false
+    REyeDila4 = false
+elif REyeDila > 1 / 8 and REyeDila <= 2 / 8:
+    REyeDila1 = true
+    REyeDila2 = false
+    REyeDila4 = false
+elif REyeDila > 2 / 8 and REyeDila <= 3 / 8:
+    REyeDila1 = false
+    REyeDila2 = true
+    REyeDila4 = false
+elif REyeDila > 3 / 8 and REyeDila <= 4 / 8:
+    REyeDila1 = true
+    REyeDila2 = true
+    REyeDila4 = false
+elif REyeDila > 4 / 8 and REyeDila <= 5 / 8:
+    REyeDila1 = false
+    REyeDila2 = false
+    REyeDila4 = true
+elif REyeDila > 5 / 8 and REyeDila <= 6 / 8:
+    REyeDila1 = true
+    REyeDila2 = false
+    REyeDila4 = true
+elif REyeDila > 6 / 8 and REyeDila <= 7 / 8:
+    REyeDila1 = false
+    REyeDila2 = true
+    REyeDila4 = true
+elif REyeDila > 7 / 8 and REyeDila <= 1:
+    REyeDila1 = true
+    REyeDila2 = true
+    REyeDila4 = true
+    
+  #all binary parameter booleans mapped for the right eye openness
+if REyeDila <= 1 / 8:
+    REyeDila1 = false
+    REyeDila2 = false
+    REyeDila4 = false
+elif REyeDila > 1 / 8 and REyeDila <= 2 / 8:
+    REyeDila1 = true
+    REyeDila2 = false
+    REyeDila4 = false
+elif REyeDila > 2 / 8 and REyeDila <= 3 / 8:
+    REyeDila1 = false
+    REyeDila2 = true
+    REyeDila4 = false
+elif REyeDila > 3 / 8 and REyeDila <= 4 / 8:
+    REyeDila1 = true
+    REyeDila2 = true
+    REyeDila4 = false
+elif REyeDila > 4 / 8 and REyeDila <= 5 / 8:
+    REyeDila1 = false
+    REyeDila2 = false
+    REyeDila4 = true
+elif REyeDila > 5 / 8 and REyeDila <= 6 / 8:
+    REyeDila1 = true
+    REyeDila2 = false
+    REyeDila4 = true
+elif REyeDila > 6 / 8 and REyeDila <= 7 / 8:
+    REyeDila1 = false
+    REyeDila2 = true
+    REyeDila4 = true
+elif REyeDila > 7 / 8 and REyeDila <= 1:
+    REyeDila1 = true
+    REyeDila2 = true
+    REyeDila4 = true
+                
+client.send_message("/Avatar/REyeDila1", REyeDila1)
+client.send_message("/Avatar/REyeDila2", REyeDila2)
+client.send_message("/Avatar/REyeDila4", REyeDila4)
+client.send_message("/Avatar/REyeDila1", REyeDila1)
+client.send_message("/Avatar/REyeDila2", REyeDila2)
+client.send_message("/Avatar/REyeDila4", REyeDila4)
+print('L: ', REyeDila, ' R: ', REyeDila)
