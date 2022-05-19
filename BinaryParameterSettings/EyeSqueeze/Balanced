@@ -1,0 +1,75 @@
+#all binary parameter booleans mapped for the left eye openness
+if LEyeSq <= 1 / 8:
+    LEyeSq1 = false
+    LEyeSq2 = false
+    LEyeSq4 = false
+elif LEyeSq > 1 / 8 and LEyeSq <= 2 / 8:
+    LEyeSq1 = true
+    LEyeSq2 = false
+    LEyeSq4 = false
+elif LEyeSq > 2 / 8 and LEyeSq <= 3 / 8:
+    LEyeSq1 = false
+    LEyeSq2 = true
+    LEyeSq4 = false
+elif LEyeSq > 3 / 8 and LEyeSq <= 4 / 8:
+    LEyeSq1 = true
+    LEyeSq2 = true
+    LEyeSq4 = false
+elif LEyeSq > 4 / 8 and LEyeSq <= 5 / 8:
+    LEyeSq1 = false
+    LEyeSq2 = false
+    LEyeSq4 = true
+elif LEyeSq > 5 / 8 and LEyeSq <= 6 / 8:
+    LEyeSq1 = true
+    LEyeSq2 = false
+    LEyeSq4 = true
+elif LEyeSq > 6 / 8 and LEyeSq <= 7 / 8:
+    LEyeSq1 = false
+    LEyeSq2 = true
+    LEyeSq4 = true
+elif LEyeSq > 7 / 8 and LEyeSq <= 1:
+    LEyeSq1 = true
+    LEyeSq2 = true
+    LEyeSq4 = true
+    
+  #all binary parameter booleans mapped for the right eye openness
+if REyeSq <= 1 / 8:
+    REyeSq1 = false
+    REyeSq2 = false
+    REyeSq4 = false
+elif REyeSq > 1 / 8 and REyeSq <= 2 / 8:
+    REyeSq1 = true
+    REyeSq2 = false
+    REyeSq4 = false
+elif REyeSq > 2 / 8 and REyeSq <= 3 / 8:
+    REyeSq1 = false
+    REyeSq2 = true
+    REyeSq4 = false
+elif REyeSq > 3 / 8 and REyeSq <= 4 / 8:
+    REyeSq1 = true
+    REyeSq2 = true
+    REyeSq4 = false
+elif REyeSq > 4 / 8 and REyeSq <= 5 / 8:
+    REyeSq1 = false
+    REyeSq2 = false
+    REyeSq4 = true
+elif REyeSq > 5 / 8 and REyeSq <= 6 / 8:
+    REyeSq1 = true
+    REyeSq2 = false
+    REyeSq4 = true
+elif REyeSq > 6 / 8 and REyeSq <= 7 / 8:
+    REyeSq1 = false
+    REyeSq2 = true
+    REyeSq4 = true
+elif REyeSq > 7 / 8 and REyeSq <= 1:
+    REyeSq1 = true
+    REyeSq2 = true
+    REyeSq4 = true
+                
+client.send_message("/Avatar/LEyeSq1", LEyeSq1)
+client.send_message("/Avatar/LEyeSq2", LEyeSq2)
+client.send_message("/Avatar/LEyeSq4", LEyeSq4)
+client.send_message("/Avatar/REyeSq1", REyeSq1)
+client.send_message("/Avatar/REyeSq2", REyeSq2)
+client.send_message("/Avatar/REyeSq4", REyeSq4)
+print('L: ', LEyeSq, ' R: ', REyeSq)
