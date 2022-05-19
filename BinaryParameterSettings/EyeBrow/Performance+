@@ -1,10 +1,10 @@
-#all binary parameter booleans mapped for the left eye openness
+#all binary parameter booleans mapped for the left eye brow
                     
 if LEyeBrow <= 1 / 2:
     LEyeBrow1 = false
 elif LEyeBrow > 1 / 2 and LEyeBrow <= 1:
     LEyeBrow1 = true
-#all binary parameter booleans mapped for the right eye openness
+#all binary parameter booleans mapped for the right eye brow
 
 if REyeBrow <= 1 / 2:
     REyeBrow1 = false
