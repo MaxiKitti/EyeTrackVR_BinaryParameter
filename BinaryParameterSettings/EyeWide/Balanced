@@ -1,0 +1,75 @@
+#all binary parameter booleans mapped for the left eye wideness
+if LEyeWide <= 1 / 8:
+    LEyeWide1 = false
+    LEyeWide2 = false
+    LEyeWide4 = false
+elif LEyeWide > 1 / 8 and LEyeWide <= 2 / 8:
+    LEyeWide1 = true
+    LEyeWide2 = false
+    LEyeWide4 = false
+elif LEyeWide > 2 / 8 and LEyeWide <= 3 / 8:
+    LEyeWide1 = false
+    LEyeWide2 = true
+    LEyeWide4 = false
+elif LEyeWide > 3 / 8 and LEyeWide <= 4 / 8:
+    LEyeWide1 = true
+    LEyeWide2 = true
+    LEyeWide4 = false
+elif LEyeWide > 4 / 8 and LEyeWide <= 5 / 8:
+    LEyeWide1 = false
+    LEyeWide2 = false
+    LEyeWide4 = true
+elif LEyeWide > 5 / 8 and LEyeWide <= 6 / 8:
+    LEyeWide1 = true
+    LEyeWide2 = false
+    LEyeWide4 = true
+elif LEyeWide > 6 / 8 and LEyeWide <= 7 / 8:
+    LEyeWide1 = false
+    LEyeWide2 = true
+    LEyeWide4 = true
+elif LEyeWide > 7 / 8 and LEyeWide <= 1:
+    LEyeWide1 = true
+    LEyeWide2 = true
+    LEyeWide4 = true
+    
+  #all binary parameter booleans mapped for the right eye wideness
+if REyeWide <= 1 / 8:
+    REyeWide1 = false
+    REyeWide2 = false
+    REyeWide4 = false
+elif REyeWide > 1 / 8 and REyeWide <= 2 / 8:
+    REyeWide1 = true
+    REyeWide2 = false
+    REyeWide4 = false
+elif REyeWide > 2 / 8 and REyeWide <= 3 / 8:
+    REyeWide1 = false
+    REyeWide2 = true
+    REyeWide4 = false
+elif REyeWide > 3 / 8 and REyeWide <= 4 / 8:
+    REyeWide1 = true
+    REyeWide2 = true
+    REyeWide4 = false
+elif REyeWide > 4 / 8 and REyeWide <= 5 / 8:
+    REyeWide1 = false
+    REyeWide2 = false
+    REyeWide4 = true
+elif REyeWide > 5 / 8 and REyeWide <= 6 / 8:
+    REyeWide1 = true
+    REyeWide2 = false
+    REyeWide4 = true
+elif LEyeWide > 6 / 8 and REyeWide <= 7 / 8:
+    REyeWide1 = false
+    REyeWide2 = true
+    REyeWide4 = true
+elif REyeWide > 7 / 8 and REyeWide <= 1:
+    REyeWide1 = true
+    REyeWide2 = true
+    REyeWide4 = true
+                
+client.send_message("/Avatar/LEyeWide1", LEyeWide1)
+client.send_message("/Avatar/LEyeWide2", LEyeWide2)
+client.send_message("/Avatar/LEyeWide4", LEyeWide4)
+client.send_message("/Avatar/REyeWide1", REyeWide1)
+client.send_message("/Avatar/REyeWide2", REyeWide2)
+client.send_message("/Avatar/REyeWide4", REyeWide4)
+print('L: ', LEyeWide, ' R: ', REyeWide)
