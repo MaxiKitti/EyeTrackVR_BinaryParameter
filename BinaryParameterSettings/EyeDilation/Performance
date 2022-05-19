@@ -1,0 +1,33 @@
+#all binary parameter booleans mapped for the left eye wideness
+if LEyeDila <= 1 / 4:
+    LEyeDila1 = false
+    LEyeDila2 = false
+elif LEyeDila > 1 / 4 and LEyeDila <= 2 / 4:
+    LEyeDila1 = true
+    LEyeDila2 = false
+elif LEyeDila > 2 / 4 and LEyeDila <= 3 / 4:
+    LEyeDila1 = false
+    LEyeDila2 = true
+elif LEyeDila > 3 / 4 and LEyeDila <= 1:
+    LEyeDila1 = true
+    LEyeDila2 = true
+                      
+#all binary parameter booleans mapped for the right eye wideness                    
+if REyeDila <= 1 / 4:
+    REyeDila1 = false
+    REyeDila2 = false
+elif REyeDila > 1 / 4 and REyeDila <= 2 / 4:
+    REyeDila1 = true
+    REyeDila2 = false
+elif REyeDila > 2 / 4 and REyeDila <= 3 / 4:
+    REyeDila1 = false
+    REyeDila2 = true
+elif REyeDila > 3 / 4 and REyeDila <= 1:
+    REyeDila1 = true
+    REyeDila2 = true
+
+client.send_message("/Avatar/LEyeDila1", LEyeDila1)
+client.send_message("/Avatar/LEyeDila2", LEyeDila2)
+client.send_message("/Avatar/REyeDila1", REyeDila1)
+client.send_message("/Avatar/REyeDila2", REyeDila2)
+print('L: ', LEyeDila, ' R: ', REyeDila)
