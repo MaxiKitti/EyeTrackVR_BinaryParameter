@@ -1,0 +1,33 @@
+#all binary parameter booleans mapped for the left eye openness 
+if LEyeBrow <= 1 / 4:
+    LEyeBrow1 = false
+    LEyeBrow2 = false
+elif LEyeBrow > 1 / 4 and LEyeBrow <= 2 / 4:
+    LEyeBrow1 = true
+    LEyeBrow2 = false
+elif LEyeBrow > 2 / 4 and LEyeBrow <= 3 / 4:
+    LEyeBrow1 = false
+    LEyeBrow2 = true
+elif LEyeBrow > 3 / 4 and LEyeBrow <= 1:
+    LEyeBrow1 = true
+    LEyeBrow2 = true
+                      
+#all binary parameter booleans mapped for the right eye openness                      
+if REyeBrow <= 1 / 4:
+    REyeBrow1 = false
+    REyeBrow2 = false
+elif REyeBrow > 1 / 4 and REyeBrow <= 2 / 4:
+    REyeBrow1 = true
+    REyeBrow2 = false
+elif REyeBrow > 2 / 4 and REyeBrow <= 3 / 4:
+    REyeBrow1 = false
+    REyeBrow2 = true
+elif REyeBrow > 3 / 4 and REyeBrow <= 1:
+    REyeBrow1 = true
+    REyeBrow2 = true
+
+client.send_message("/Avatar/LEyeBrow1", LEyeBrow1)
+client.send_message("/Avatar/LEyeBrow2", LEyeBrow2)
+client.send_message("/Avatar/REyeBrow1", REyeBrow1)
+client.send_message("/Avatar/REyeBrow2", REyeBrow2)
+print('L: ', LEyeBrow, ' R: ', REyeBrow)
